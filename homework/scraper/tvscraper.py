@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-# Name:
-# Student number:
+# Name: Lisa Boerdam
+# Student number: 10532277
 """
 This script scrapes IMDB and outputs a CSV file with highest rated tv series.
 """
@@ -33,29 +33,46 @@ def extract_tvseries(dom):
     # UNICODE CHARACTERS AND SIMPLY LEAVE THEM OUT OF THE OUTPUT.
 
     # initialize lists
-    Titles = []
-    Ratings = []
-    Genres = []
-    Actors = []
-    Runtimes = []
+    seriesinfo = []
 
     # extract all items for series
     allseries = dom.find_all("div", {"class": "lister-item-content"})
 
     for serie in allseries:
 
+        serieinfo = []
         # title
         Title = serie.h3.a.text
-        Titles.append(Title)
+        serieinfo.append(Title)
 
         # rating
         Rating = serie.strong.text
-        Ratings.append(Rating)
+        serieinfo.append(Rating)
 
-    print(Titles)
+        # genre
+        Genre = serie.find('span', class_ = 'genre').get_text(strip=True)
+        serieinfo.append(Genre)
 
+        # actors
+        Actors = []
+        for actor in serie.find_all('p')[2].find_all('a'):
+            Actors.append(actor.text)
+        # make actor list neater
+        actors = ", ".join(Actors)
+        serieinfo.append(actors)
 
-    return []   # REPLACE THIS LINE AS WELL AS APPROPRIATE
+        # runtime
+        Runtime = serie.find('span', class_ = 'runtime').get_text(strip=True)
+        if Runtime:
+            serieinfo.append(Runtime)
+        else:
+            serieinfo.append('not available')
+
+        seriesinfo.append(serieinfo)
+
+    # return all fields
+    print(seriesinfo)
+    return seriesinfo
 
 
 def save_csv(outfile, tvseries):
@@ -64,9 +81,10 @@ def save_csv(outfile, tvseries):
     """
     writer = csv.writer(outfile)
     writer.writerow(['Title', 'Rating', 'Genre', 'Actors', 'Runtime'])
+    for tvserie in tvseries:
+        writer.writerow([tvserie[0],tvserie[1],tvserie[2], tvserie[3], tvserie[4]])
 
     # ADD SOME CODE OF YOURSELF HERE TO WRITE THE TV-SERIES TO DISK
-
 
 def simple_get(url):
     """
