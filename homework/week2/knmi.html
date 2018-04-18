@@ -377,8 +377,9 @@ AVG temperature de Bilt
   20171231,  106	
 </textarea>
 <script>
-var tempdata = document.getElementByID("rawdata");
-cconsole.log(JSON.parse(JSON.stringify(tempdata)));
+var rtempdata = document.getElementByID("rawdata");
+var tempdata = rtempdata.split("\n");
+cconsole.log(tempdata);
 </script>
 
 
