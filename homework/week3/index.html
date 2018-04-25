@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <!-- This is where your bar chart will go -->
-  </body>
+	<head>
+		<meta charset="utf-8">
+        <title>Bar chart title</title>
+        <script type="text/javascript" src="d3/d3.v3.js"></script>
+	</head>
+  	<body>
+    	<script type="text/javascript">
+    		d3.select("body").append("p").text("Lisa Boerdam - 10532277");
+            d3.select("body").append("p").text("doden als gevolg van verkeersongevallen in Nederland, per provincie");
+
+            d3.json("verkeersdoden.json", function(data) {
+ 			//d3.select("body").selectAll("p").data(data).enter().append("p").text(function(d) {return(d); });	
+			// create svg attribute
+			var svg = d3.select("body").append("svg");
+			svg.attr("width",1000)
+			.attr("height",300)
+			
+			// create bars
+			var rects = svg.selectAll("rect")
+            .data(data)
+            .enter()
+            .append("rect")
+			.attr("fill", "yellow")
+            .attr("x", function(d, i){return (i * 50) + 50})
+            .attr("width", 30)
+            .attr("height",300);
+			});
+        </script>
+  	</body>
 </html>
