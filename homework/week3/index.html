@@ -10,22 +10,66 @@
     		d3.select("body").append("p").text("Lisa Boerdam - 10532277");
             d3.select("body").append("p").text("doden als gevolg van verkeersongevallen in Nederland, per provincie");
 
-            d3.json("verkeersdoden.json", function(data) {
- 			//d3.select("body").selectAll("p").data(data).enter().append("p").text(function(d) {return(d); });	
-			// create svg attribute
+            d3.json("verkeersdoden.json", function(data) {	
+			// initialize svg element
+			var svgwidth = 600;
+			var svgheight = 300;
+			var barpadding = 3;
+			var paddingleft = 30;
+			var heightmargin = 30;
+
+			// create svg element
 			var svg = d3.select("body").append("svg");
-			svg.attr("width",1000)
-			.attr("height",300)
-			
+			svg.attr("width", svgwidth + paddingleft)
+			.attr("height", svgheight + heightmargin)
+
+			// create scale
+			var yscale = d3.scale.linear()
+			.domain([100, 0])
+			.range([0, svgheight])
+
+			// create y axis
+			var yaxis = d3.svg.axis()
+			.scale(yscale)
+            .orient("left")
+            .ticks(5)
+            .tickSize(2)
+
 			// create bars
 			var rects = svg.selectAll("rect")
             .data(data)
             .enter()
             .append("rect")
 			.attr("fill", "yellow")
-            .attr("x", function(d, i){return (i * 50) + 50})
-            .attr("width", 30)
-            .attr("height",300);
+            .attr("x", function(d, i){return (i * (svgwidth / data.length)+paddingleft)})
+            .attr("y", function(d){return yscale(d["aantal doden"])})
+            .attr("width", svgwidth/data.length-barpadding)
+            .attr("height", function(d){return svgheight - yscale(d["aantal doden"])})
+
+            // labels
+            svg.selectAll("text")
+   			.data(data)
+   			.enter()
+   			.append("text")
+   			.text(function(d) {return d["provincie"]})
+   			.attr("x", function(d, i){return (i * (svgwidth / data.length)+paddingleft)})
+            .attr("y", function(d){return svgheight + 10})
+            .attr("font-family", "sans-serif")
+   			.attr("font-size", "11px")
+
+            // call axis
+            svg.append("g")
+    		.attr("transform", "translate(" + paddingleft + ",7)")
+    		.call(yaxis);
+    		// style of labels
+    		d3.selectAll("g>.tick>text")
+  			.each(function(d, i){
+    		d3.select(this).style("font-size",13).style("font-family", "sans-serif");
+  					});
+  			d3.selectAll("g>path>.domain")
+  			.each(function(d, i){
+    		d3.select(this).style("font-size",13).style("font-family", "sans-serif");
+  					});
 			});
         </script>
   	</body>
