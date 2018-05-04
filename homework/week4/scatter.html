@@ -2,6 +2,7 @@
 
 <html>
 <!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+<!-- Link to data http://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+.+SW_LIFS.L.TOT/all? -->
 	<head>
 		<script src="https://d3js.org/d3.v4.js"></script>
 		<script src="scatter.js"></script>
@@ -10,6 +11,13 @@
 		<title>D3 Scatterplot</title>
 	</head>
 	<body>
-		<h1>This is a Heading</h1>
+		<div id=title>Satisfaction Index per Country</div>
+		<div id="subtitle">Based on Net Household Wealth</div>
+		<div class="buttons">
+  		<button onclick="worldwide()" class="dropbtn">Worldwide</button>
+  		<button onclick="europe()" class="dropbtn">Europe</button>
+  		<button onclick="asia()" class="dropbtn">Asia</button>
+  		<button onclick="oceania()" class="dropbtn">Oceania</button>
+		</div>
 	</body>
 </html>

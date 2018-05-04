@@ -2,22 +2,26 @@ body {
     background-color: pink;
 }
 
-h1 {
-    font-family: sans-serif;
+#title {
+    font: 60px sans-serif;
+    color: navy;
+    font-weight: bold;
+    margin-left: 80px;
+}
+
+#subtitle {
+    font: 30px sans-serif;
     color: navy;
     margin-left: 80px;
 }
 
 div.tooltip {   
   position: absolute;           
-  text-align: center;           
-  width: 60px;                  
-  height: 28px;                 
-  padding: 2px;             
-  font: 12px sans-serif;        
-  background: lightsteelblue;   
-  border: 0px;      
-  border-radius: 8px;           
+  text-align: center;                                                 
+  font: 40px sans-serif;  
+  font-weight: bold;  
+  color: #3c3c3c;       
+  opacity: 0.5;        
   pointer-events: none;         
 }
 
@@ -25,4 +29,19 @@ a {
 	position: absolute;
 	bottom: 0;
 	font-family: sans-serif;
+}
+
+.buttons {
+margin-left: 80px;
+}
+
+button {
+    background-color: gray; 
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
