@@ -9,7 +9,7 @@ function worldwide(){
 	var svg = d3.select("body").transition();
 	d3.selectAll("svg").remove();
 	// request data from URL
-	var data = "http://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
+	var data = "https://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
 	d3.request(data)
 	.get(conversion)
 	var jsonList = []
@@ -81,7 +81,7 @@ function europe(){
 	var svg = d3.select("body").transition();
 	d3.selectAll("svg").remove();
 	// request data from URL
-	var data = "http://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
+	var data = "https://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
 	d3.request(data)
 	.get(conversion)
 	var jsonList = []
@@ -155,7 +155,7 @@ function asia(){
 	var svg = d3.select("body").transition();
 	d3.selectAll("svg").remove();
 	// request data from URL
-	var data = "http://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
+	var data = "https://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
 	d3.request(data)
 	.get(conversion)
 	var jsonList = []
@@ -229,7 +229,7 @@ function america(){
 	var svg = d3.select("body").transition();
 	d3.selectAll("svg").remove();
 	// request data from URL
-	var data = "http://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
+	var data = "https://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
 	d3.request(data)
 	.get(conversion)
 	var jsonList = []
@@ -303,7 +303,7 @@ function oceania(){
 	var svg = d3.select("body").transition();
 	d3.selectAll("svg").remove();
 	// request data from URL
-	var data = "http://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
+	var data = "https://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA.IW_HNFW+SW_LIFS.L.TOT/all?"
 	d3.request(data)
 	.get(conversion)
 	var jsonList = []
