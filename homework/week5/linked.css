@@ -1,0 +1,9 @@
+div.tooltip {   
+  position: absolute;           
+  text-align: center;                                                 
+  font: 40px sans-serif;  
+  font-weight: bold;  
+  color: #3c3c3c;       
+  opacity: 0.5;        
+  pointer-events: none;         
+}
