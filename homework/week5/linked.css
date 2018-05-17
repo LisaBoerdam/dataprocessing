@@ -1,3 +1,14 @@
+text.title {
+    font: 39px sans-serif;
+    font-weight: bold;
+    color: #abcaff;
+}
+
+text.figureTitle {
+    font: 16px sans-serif;
+    font-weight: bold;
+}
+
 div.tooltip {   
   position: absolute;           
   text-align: center;                                                 
