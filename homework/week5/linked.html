@@ -5,7 +5,8 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://d3js.org/d3.v4.js"></script>
-		<script src="linked.js"></script>
+		<script src="linked2.js"></script>
+		<!-- <script src="linked.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="linked.css">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,5 +16,57 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+		<div class="row">
+  			<div class="col-sm-12" id="area1">Bevolkings ontwikkeling NL</div>
+  			<div class="btn-group btn-group-justified">
+    <div class="btn-group">
+      <button onclick="update(0)" type="button" class="btn btn-primary btn-xs">1900</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(1)" type="button" class="btn btn-primary btn-xs">1910</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(2)" type="button" class="btn btn-primary btn-xs">1920</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(3)" type="button" class="btn btn-primary btn-xs">1930</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(4)" type="button" class="btn btn-primary btn-xs">1940</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(5)" type="button" class="btn btn-primary btn-xs">1950</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(6)" type="button" class="btn btn-primary btn-xs">1960</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(7)" type="button" class="btn btn-primary btn-xs">1970</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(8)" type="button" class="btn btn-primary btn-xs">1980</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(9)" type="button" class="btn btn-primary btn-xs">1990</button>
+    </div>
+     <div class="btn-group">
+      <button onclick="update(10)" type="button" class="btn btn-primary btn-xs">2000</button>
+    </div>
+    <div class="btn-group">
+      <button onclick="update(11)" type="button" class="btn btn-primary btn-xs">2010</button>
+    </div>
+    </div>
+  </div>
+		</div>
+		<div class="row">
+  			<div class="col-sm-12" id="area2"></div>
+		</div>
+		<div class="row">
+  			<div class="col-sm-4" id="area3"></div>
+  			<div class="col-sm-4" id="area4"></div>
+  			<div class="col-sm-4" id="area5"><p>Hoe heeft de Nederlandse bevolking zich over de afgelopen eeuw ontwikkeld? Hoe was de verdeling tussen mannen en vrouwen? Zijn we ouder geworden over de jaren heen?</p>
+  			<p>Beweeg over de bolletjes in de bovenste figuur voor de totale populatie grootte en klik op de bolletjes of knoppen voor informatie over de bevolkingssamenstelling per 10 jaar.</p>
+  			<p>Data afkomstig van het <a href="https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37296ned/table?ts=1526642387880">CBS</a>.</p></div>
+		</div>
 	</body>
 </html>

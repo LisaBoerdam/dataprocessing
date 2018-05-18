@@ -1,12 +1,25 @@
-text.title {
-    font: 39px sans-serif;
-    font-weight: bold;
-    color: #abcaff;
+#area1{
+  font: 70px sans-serif;
+  font-weight: bold;
+  color: #ff8330;
+  margin-left: 80px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#area2{
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 text.figureTitle {
-    font: 16px sans-serif;
-    font-weight: bold;
+  font: 12px sans-serif;
+  font-weight: bold;
+}
+
+text.figureLabel {
+  font: 12px sans-serif;
+  font-weight: bold;
 }
 
 div.tooltip {   
@@ -17,4 +30,24 @@ div.tooltip {
   color: #3c3c3c;       
   opacity: 0.5;        
   pointer-events: none;         
+}
+
+text.label {
+  font-size: 10px;
+}
+
+/*#area2 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 30%;
+    vertical-align: top;
+    overflow: hidden;
+}*/s
+
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
