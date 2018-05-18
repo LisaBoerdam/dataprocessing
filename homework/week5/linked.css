@@ -36,18 +36,11 @@ text.label {
   font-size: 10px;
 }
 
-/*#area2 {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 30%;
-    vertical-align: top;
-    overflow: hidden;
-}*/s
-
-svg {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #a63fff !important;;
+    border-color: #a63fff !important;;
 }
